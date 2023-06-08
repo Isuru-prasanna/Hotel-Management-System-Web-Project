@@ -32,10 +32,11 @@ if (isset($_POST['submit'])) {
 				$details = $_POST["details"];
 				$button = $_POST["button"];
 				// Insert into Database
-				$sql="INSERT INTO food VALUES ('$new_img_name','$name','$price','$details','$button')";
+				$sql = "INSERT INTO `food`(`img`, `name`, `price`, `details`, `button`) VALUES ('$new_img_name','$name','$price','$details','$button')";
+				// $sql="INSERT INTO food VALUES ('$new_img_name','$name','$price','$details','$button')";
 				if($dbconn->query($sql) === TRUE){
 					echo "<script>alert('Updated');</script>";
-				header('Location: Admin_Customer_Food.php?');
+				header('Location: Admin_Page.php?');
 				}else{
 					echo "<script>alert('Record is not inserted');</script>";
 					$dbconn->connect_error;

@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +15,16 @@
 </head>
 
 <body>
+<?php 
+   if (!isset($_SESSION['admin_email'])) {
+    $_SESSION['admin_email'] = null;
+} else if (isset($_SESSION['admin_email'])) {
+    $_SESSION['admin_email'] = $_SESSION['admin_email'];
+}
+$admin = $_SESSION['admin_email'];
 
+ if($admin == true){
+ ?>
     <header>
 
        <?php  require_once './nav/nav.php'; ?>
@@ -264,6 +274,12 @@
             </div>
         </div>
     </footer>
+    <?php
+ }
+    else{
+        header("Location:Login.php");
+    }
+    ?>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

@@ -10,9 +10,10 @@ $duplicate = mysqli_query($dbconn, "SELECT * FROM employee WHERE email = '$email
 if(mysqli_num_rows($duplicate)> 1 ){
     echo "<script>alert('email or password alredy taken');</script>";
 }else{
-$sql = "INSERT INTO employee VALUES('$name','$email','$phone','$password','$address')";
+    $sql = "INSERT INTO `employee`(`name`, `email`, `phone`, `password`, `address`) VALUES ('$name','$email','$phone','$password','$address')";
+// $sql = "INSERT INTO employee VALUES('$name','$email','$phone','$password','$address')";
 if($dbconn->query($sql) === TRUE){
-    header("Location:.\home.php");
+    header("Location:.\Admin_Page.php");
 }else{
     echo "<script>alert('Record is not inserted');</script>";
     $dbconn->connect_error;

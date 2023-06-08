@@ -29,14 +29,10 @@
                 <span class="sr-only">(current)</span>
               </a>
             </li>
-            <li class="nav-item">
-              <div class="dropdown">
-                <a href="#" class="nav-link text-white">Login</a>
-                <div class="dropdown-content">
-                  <a  href="Login.php">Customer</a>
-                  <a  href="Employee.php">Employee</a>
-                </div>
-              </div>
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="Login.php">Login
+                <span class="sr-only">(current)</span>
+              </a>
             </li>
             <li class="nav-item dropdown">
               <div class="dropdown">
@@ -106,50 +102,38 @@
     <!-- Section 4 -->
     <section class="section-4">
       <div class="team row ">
-        <div class="col-md-4 col-12 text-center">
-          <div class="card mr-2 d-inline-block shadow-lg">
-            <div class="card-img-top">
-              <img src="PIC/fried-rice-egg-topping-shrimp-spoon-fork-plate-white-85316235.jpg" class="img-fluid border-radius p-4" alt="">
-            </div>
-            <div class="card-body">
-              <h3 class="card-text">Fried Rice</h3>
-              <p class="card-text">
-                This is my secret ingredient! I love using butter in my Chinese fried rice. To me it adds a lot more flavor and helps to brown the rice. You can always
-                substitute any other cooking oil if you prefer
-              </p>
-            </div>
-          </div>
-        </div>
         <div class="col-md-4 col-12">
           <div id="carouselExampleControls" class="carousel slide " data-ride="carousel">
             <div class="carousel-inner text-center">
               <div class="carousel-item active">
-                <div class="card mr-2 d-inline-block shadow">
-                  <div class="card-img-top">
-                    <img src="PIC/FoodRise.jpeg" class="img-fluid rounded-circle w-50 p-4" alt="">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Rice and Curry</h3>
-                    <p class="card-text">
-                      There are many smells of Sri Lankan food: cinnamon, pepper, cardamom, coconut, papaya, mango, pineapple, pungent dried maldive fish and tea. But if there was one fragrance
-                      that was ubiquitous across the island once known as Serendip, it's that of curry leaves
-                    </p>
-                  </div>
+              <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 custom-cl data-parent" data-product='<?php echo json_encode($product); ?>'>
+                <div class="card card-widget product-card  p-1" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div class="custom card-body">
+                        <button class="btn btn-sm" onclick="productModal(this);"><i class="fas fa-search"></i></button>
+                        <div class="img-parent">
+                            <div class="imag-wrapper">
+                                <a href="">
+                                    <img class="img-fluid pad" src="PIC/2-2.jpg" alt="" >
+                                </a>
+                                <div class="text-right info_badge">
+                                    <span data-toggle="tooltip" data-placement="top" title="BV" title="My tip" class="badge bg-info">10</span>
+                                    <span data-toggle="tooltip" data-placement="top" title="Direct Commission" class="badge bg-primary text-right">100</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-2" style="display: grid;">
+                            <div style="min-height:35px;">
+                                <a href=""><h5 class="mb-0 prduct_title">capatino</h5></a>
+                            </div>
+                            <div class="product_cd_price">
+                                <h6 class="mb-0"> LKR 1500 </h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.card-body -->
                 </div>
-              </div>
-              <div class="carousel-item">
-                <div class="card  d-inline-block mr-2 shadow">
-                  <div class="card-img-top">
-                    <img src="PIC/dsc00115.jpg" class="img-fluid rounded-circle w-50 p-2" alt="">
-                  </div>
-                  <div class="card-body">
-                    <h3 class="card-title">Hopper</h3>
-                    <p class="card-text">
-                      Hoppers come in many forms. Standard hoppers are typical Sri Lankan bowl-shaped or funnel-shaped pancakes.
-                      String hoppers are nests of noodle-like steamed batter. They’re almost like rice noodles, to eat with curries and chutneys in place of rice.
-                    </p>
-                  </div>
-                </div>
+                <!-- /.card -->
+            </div>
               </div>
             </div>
           </div>

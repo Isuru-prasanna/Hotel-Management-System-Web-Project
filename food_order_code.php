@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
 
             echo "<script language=\"JavaScript\">\n";
             echo "alert('You are Order Sucsessfull');\n";
-            echo "window.location='Category_Food_Custom.php'";
+            echo "window.location='HomeCustomer.php'";
             echo "</script>";
         } else {
             echo "<script>alert('Not Add Order');</script>";
@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     } else {
         echo "<script language=\"JavaScript\">\n";
         echo "alert('Access Denied!!!');\n";
-        echo "window.location='Category_Food_Custom.php'";
+        echo "window.location='HomeCustomer.php'";
         echo "</script>";
     }
 }

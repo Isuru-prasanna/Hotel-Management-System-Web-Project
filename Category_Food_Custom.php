@@ -19,7 +19,7 @@
             <div class="menu text-right">
                 <ul>
                     <li>
-                        <a href="HomeCustomer.php">Home</a>
+                        <!-- <a href="HomeCustomer.php">Home</a> -->
                     </li>
                 </ul>
             </div>

@@ -1,0 +1,218 @@
+/*
+|--------------------------------------------------------------------------
+|  Add Listing page
+|--------------------------------------------------------------------------
+*/
+.category-list li a.active{
+  color: #FD8B00;
+}
+
+.category-list{
+  list-style: none;
+  padding-left: 0;
+}
+
+.category-card{
+  min-height: 423px;
+}
+
+.category-list li{
+  position: relative;
+}
+
+.category-list li i{
+  position: absolute;
+  right: 0;
+}
+
+.caterory-row .col-md-4{
+    padding:0;
+}
+
+.card-body-image{
+  padding:0;
+}
+.dropify-infos-message{
+  display: none;
+}
+
+.cropper-bg .cropper-container{
+  width: 500px;
+  height: 500px;
+}
+
+/* .btn-sm{
+    display: none;
+} */
+/*
+|--------------------------------------------------------------------------
+| my listing page
+|--------------------------------------------------------------------------
+*/
+@media only screen and (max-width: 767px) {
+    .my-listing-btn a{
+      min-width: 120px;
+    }
+ }
+
+.search-btn{
+    margin-top: 30px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| 404 error page
+|--------------------------------------------------------------------------
+*/
+.error-box {
+  height: 100%;
+  position: fixed;
+  /* background: url(/assets/custom/img/login-register.jpg) no-repeat center center #fff; */
+  width: 100%;
+}
+
+.error-body {
+  padding-top: 5%;
+}
+
+.error-body h1 {
+  font-size: 210px;
+  font-weight: 900;
+  text-shadow: 4px 4px 0 #fff, 6px 6px 0 #343a40;
+  line-height: 210px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| signin signup page logo
+|--------------------------------------------------------------------------
+*/
+
+.register-page{
+  background-image: url("/assets/custom/img/signin-bg.jpg");
+}
+
+.login-page{
+  background-image: url("/assets/custom/img/signin-bg.jpg");
+}
+
+.signin-logo img {
+  width: 150px;
+}
+
+.sidebar-logo {
+  width: 65px;
+}
+
+.smile-btn {
+  color: #000000;
+  background-color: #fd8b00;
+  border-color: #fd8b00;
+  box-shadow: none;
+}
+
+.smile-btn:hover {
+  color: #000000;
+  background-color: #ff9505;
+  border-color: #FF7C00;
+}
+
+.smile-btn:not(:disabled):not(.disabled).active, .smile-btn:not(:disabled):not(.disabled):active, .show>.smile-btn.dropdown-toggle {
+  color: #000000;
+  background-color: #FF7C00;
+  border-color: #ff9505;
+}
+
+.smile-btn.focus, .smile-btn:focus {
+  color: #000000;
+  background-color: #ff9505;
+  border-color: #FF7C00;
+  box-shadow: 0 0 0 0 rgb(38 143 255 / 50%);
+}
+
+.tooltip-inner {
+  font-size: 14px;
+  background: #268fff;
+  color: #ffffff;
+  border: 1px solid #268fff;
+}
+
+
+@media only screen and (min-width: 768px) {
+  .tooltip-inner {
+    max-width:  400px!important;
+  }
+
+  .category-card {
+    min-height: 446px;
+}
+
+}
+
+
+.add-listing-tab.nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+  color: #000000;
+  background-color: #daecff;
+}
+
+.add-listing-tab.nav-tabs .nav-link {
+  border-top: 1px solid rgb(202, 202, 202);
+}
+
+@media only screen and (max-width: 600px) {
+  .add-listing-tab-content{
+    margin-top: 20px;
+  }
+
+
+}
+
+/*
+|--------------------------------------------------------------------------
+|  Basic Info page
+|--------------------------------------------------------------------------
+*/
+
+/* add new brand */
+.btn-color
+{
+  color: #0492c2;
+  cursor: pointer;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Jquary validation error
+|--------------------------------------------------------------------------
+*/
+.text-danger.custom {
+  width: 100% !important;
+  display: block !important;
+  margin: 0 !important;
+  font-weight: 500 !important;
+}
+
+
+/*
+|--------------------------------------------------------------------------
+| Start loader custom style
+|--------------------------------------------------------------------------
+*/
+body>.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0000002e;
+  z-index: 9999;
+  height: 100vh;
+}
+
+body>.loader-wrapper>svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

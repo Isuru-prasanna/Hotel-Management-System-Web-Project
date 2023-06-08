@@ -28,9 +28,9 @@ session_start();
                     <div class="mr-auto"></div>
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link text-white" href="HomeCustomer.php">HOME
+                            <!-- <a class="nav-link text-white" href="HomeCustomer.php">HOME
                                 <span class="sr-only">(current)</span>
-                            </a>
+                            </a> -->
                         </li>
                         <li class="nav-item dropdown">
                             <div class="dropdown">
@@ -70,8 +70,8 @@ session_start();
                                 <th scope="col">ID</th>
                                 <th scope="col">Order</th>
                                 <th scope="col">Quantity</th>
-                                <th scope="col">price</th>
-                                <th scope="col">Action</th>
+                                <th scope="col">one pis price</th>
+                                <!-- <th scope="col">Action</th> -->
                             </tr>
                         </thead>
 
@@ -94,11 +94,11 @@ session_start();
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['name']; ?></td>
                                     <td><?php echo $row['picks']; ?></td>
-                                    <td><?php echo $row['price'] * $row['picks']; ?></td>
-                                    <td>
-                                <a href="{{ url('cart.php/'."$row['id']") }}"  name="delete"   onclick="return confirm('Are you sure Delete Account?')" class="btn btn-danger">Delete</a>
+                                    <td><?php echo $row['price'] ?></td>
+                                    <!-- <td>
+                                <a href="{{ url('cart.php/'.'<?=$row['id'];?>') }}"  name="delete"   onclick="return confirm('Are you sure Delete Account?')" class="btn btn-danger">Delete</a>
                                 <a href="submit" name="Update"  onclick="return confirm('Are you sure?')" class="btn btn-warning">Update</a>
-                                     </td>
+                                     </td> -->
                                     </tr>
                                 </tbody>
 
@@ -130,6 +130,7 @@ session_start();
 
     </footer>
 </body>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

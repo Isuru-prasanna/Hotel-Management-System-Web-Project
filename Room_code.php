@@ -37,7 +37,8 @@ if (isset($_POST['submit'])) {
                 $bath = $_POST["bath"];
                 $tv = $_POST["tv"];
 				// Insert into Database
-				$sql="INSERT INTO room VALUES ('$new_img_name','$name','$details','$bed','$air','$wifi','$bar','$bath','$tv','$button')";
+				$sql = "INSERT INTO `room`(`img`, `name`, `details`, `bed`, `air`, `wifi`, `bar`, `bath`, `tv`, `button`) VALUES ('$new_img_name','$name','$details','$bed','$air','$wifi','$bar','$bath','$tv','$button')";
+				//$sql="INSERT INTO room VALUES ('$new_img_name','$name','$details','$bed','$air','$wifi','$bar','$bath','$tv','$button')";
 				if($dbconn->query($sql) === TRUE){
 					echo "<script>alert('Updated');</script>";
 				header('Location: Admin_Customer_Room.php?');

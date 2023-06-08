@@ -1,95 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-    crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-    crossorigin="anonymous">
-    <script type="text/javascript" src="validation.js">
-        </script>
-  <link rel="stylesheet" href="." />
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- favicon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/custom/img/favicon.png">
+
+  <title>Title | Registration Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="./assets/theam-default/plugins/fontawesome-free/css/all.min.css">
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="./assets/theam-default/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+
+  <link rel="stylesheet" href="./assets/theam-default/plugins/select2/css/select2.min.css">
+  <link rel="stylesheet" href="./assets/theam-default/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+  <!-- Theme style -->
+  <link rel="stylesheet" href="./assets/theam-default/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./assets/theam-default/plugins/toastr/toastr.min.css">
+  <link rel="stylesheet" href="./assets/custom/css/custom-style.css">
+
 </head>
-<body>
-<form action="CustomerRegistrationCode.php" method="post">
-<section class="vh-100" style="background-color: #eee;">
-  <div class="container h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-12 col-xl-11">
-        <div class="card text-black" style="border-radius: 25px;">
-          <div class="card-body p-md-5">
-            <div class="row justify-content-center">
-              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+<body class="hold-transition register-page">
+<div class="register-box">
+  <slection class="form my-3 m-5">
+    <div class="register-logo signin-logo">
+      <a href="/"><img src="./assets/custom/img/logomr.png" alt=""></a>
+    </div>
 
-                <p class="text-center h3 fw-bold mb-5 mx-1 mx-md-4 mt-4">CUSTOMERS SIGN UP</p>
+    <div class="card shadow-sm">
+      <div class="card-body register-card-body">
+        <p class="login-box-msg">Register a new membership</p>
 
-                <form class="mx-1 mx-md-4">
-                <i class="fas fa-user fa-lg me-3 fa-fw"></i>
-                  <div class="d-flex flex-row align-items-center mb-4">     
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="customname" name="customname" onblur="NameValidation()" class="form-control" />
-                      <label class="form-label" for="form3Example1c">Your Name</label>
-                      <label id="n_Name"></label>
-                    </div>
-                  </div>
-                  <i class="fa fa-tty" aria-hidden="true"></i>
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="Number" id="customphone" name="customphone" onblur="Phonevalidation()" class="form-control" />
-                      <label class="form-label" for="form3Example2c">Your Phone NO</label>
-                      <lable id="n_phone"><lable>
-                    </div>
-                  </div>
-                  <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="email" id="customemail" name="customemail" onblur="emailvalidation()"  class="form-control" />
-                      <label class="form-label" for="form3Example3c">Your Email</label>
-                      <lable id="n_email"></lable>
-                    </div>
-                  </div>
-                  <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="password" id="custompassword" onblur="PasswordValidation()" placeholder="10 character limit" name="custompassword" class="form-control" />
-                      <label class="form-label" for="form3Example4c">Password</label>
-                      <lable id="n_password"></lable>
-                    </div>
-                  </div>
-                  <i class="fa fa-address-book" aria-hidden="true"></i>
-                  <div class="d-flex flex-row align-items-center mb-4">
-                    <div class="form-outline flex-fill mb-0">
-                      <input type="text" id="customaddress" name="customaddress" class="form-control" />
-                      <label class="form-label" for="form3Example4cd">Address</label>
-                    </div>
-                  </div>
-
-                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
-                    <button type="submit" class="btn btn-primary btn-lg" value="Submit">Register</button>
-                  </div>
-
-                </form>
-
-              </div>
+        <form action="./CustomerRegistrationCode.php" method="post" id="signup-form">
+          <div class="input-group mb-3">
+              <input type="text" class="form-control phone" placeholder="Phone Number" name="phone" id="phone" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-phone-volume"></span>
+                </div>
               </div>
             </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Full Name" name="name" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-user"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Address" name="address" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-map-marker-alt"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="email" class="form-control laxEmail" placeholder="Email" name="email" id="email" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-solid fa-envelope"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="NIC" name="nic" id="nic" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-solid fa-id-card"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control pass" placeholder="Password" id="password" name="password" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+            <div class="input-group mb-3">
+              <input type="password" class="form-control" placeholder="Retype password"  id="password_confirmation" name="password_confirmation" required>
+              <div class="input-group-append">
+                <div class="input-group-text">
+                  <span class="fas fa-lock"></span>
+                </div>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-8">
+              <div class="icheck-primary">
+                <input type="checkbox" id="agreeTerms" name="terms" value="agree" required>
+                <label for="agreeTerms">
+                I agree to the <a href="#">terms</a>
+                </label>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+              <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+            <!-- /.col -->
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-</form>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="./main.js"></script>
+        </form>
 
+        <a href="./Login.php" class="text-center">I already have a membership</a>
+      </div>
+      <!-- /.form-box -->
+    </div><!-- /.card -->
+  </div>
+<!-- /.register-box -->
+</slection>
+</div>
+<!-- jQuery -->
+<?php if(isset($_GET['msg'])){
+    echo "<script>toastr.error(".$_GET['msg'].")</script>";
+}?>
+<script src="./assets/theam-default/plugins/jquery/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/additional-methods.min.js"></script>
+
+<!-- Bootstrap 4 -->
+<script src="./assets/theam-default/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="./assets/theam-default/dist/js/adminlte.min.js"></script>
+<script src="./assets/custom/js/form-validation-init.js"></script>
+<script src="./assets/theam-default/plugins/select2/js/select2.full.min.js"></script>
+<script src="./assets/theam-default/plugins/toastr/toastr.min.js"></script>
+
+<script>
+  // var token = "{{ csrf_token() }}";
+
+  // jQuery(window).on('load', function(){
+  //   $('.select2').select2();
+  // });
+
+
+  // $("#phone").focusout(function(){
+  //  var phone = $(this).val();
+  //  var email = null;
+  //   verificationVendorDetails(phone,email);
+  //   });
+  //   $("#email").focusout(function(){
+  //  var phone = null;
+  //  var email = $(this).val();
+  //   verificationVendorDetails(phone,email);
+  //   });
+</script>
 </body>
 </html>
+
